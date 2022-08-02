@@ -1,0 +1,78 @@
+@import "@/style/constants";
+
+.table {
+  width: 100%;
+}
+
+.table__row {
+  display: flex;
+
+  height: 58px;
+
+  border-bottom: 1px solid #eeebe9;
+}
+
+.table__col {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+
+  &:not(:first-child) > * {
+    padding: 10px 20px;
+  }
+
+  &:first-child {
+    max-width: 80px;
+  }
+
+  &:nth-child(2) {
+    max-width: 938px;
+  }
+
+  &:nth-child(3) {
+    max-width: 151px;
+  }
+
+  &:nth-child(4) {
+    max-width: 129px;
+  }
+}
+
+.table__headers .table__col:not(:first-child) > * {
+  padding: 10px 20px 4px;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  border-left: 1px solid #c4c4c4;
+}
+@media (max-width: $mobileWrap) {
+  .table {
+    overflow-x: auto;
+    display: block;
+
+    white-space: nowrap;
+  }
+
+  .table__col {
+    white-space: break-spaces;
+
+    &:first-child {
+      width: 60px;
+    }
+
+    &:nth-child(2) {
+      width: 214px;
+    }
+
+    &:nth-child(3) {
+      width: 151px;
+    }
+
+    &:nth-child(4) {
+      width: 129px;
+    }
+  }
+}

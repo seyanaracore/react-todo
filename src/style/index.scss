@@ -1,0 +1,91 @@
+@import "./constants";
+
+#root {
+  max-width: 1300px;
+  margin: 100px auto 12px;
+  padding: 0 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: VelaSansRegular, sans-serif;
+  color: $blackColor;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+@font-face {
+  font-family: MontserratBold;
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: VelaSansRegular;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/VelaSans-Regular.ttf");
+}
+@media (max-width: $mobileWrap) {
+  #root {
+    margin-top: 24px;
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 34px;
+}
+
+.title {
+  font-family: MontserratBold, sans-serif;
+  font-size: 20px;
+}
+
+.top-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-left: 40px;
+}
+
+.todo-list-control-container {
+  margin-bottom: 30px;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+
+  padding-top: 4px;
+
+  background: white;
+}
+@media (max-width: $mobileWrap) {
+  .todo-list-control-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .top-wrapper {
+    margin-left: 0;
+  }
+}

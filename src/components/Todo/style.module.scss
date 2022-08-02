@@ -1,0 +1,53 @@
+@import "../../style/constants";
+
+.todoItem {
+  &:hover {
+    background: #f6f9ff;
+  }
+}
+
+.marker > path {
+  stroke: $blueColor;
+}
+
+.todoCompleteBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+  margin-left: 40px;
+  padding: 0;
+
+  background: #fff;
+  border: 1px solid $blackColor;
+  border-radius: 25px;
+
+  &.completed {
+    border-color: $blueColor;
+    box-shadow: 0 4px 4px rgb(19 78 193 / 15%);
+  }
+}
+
+.todoStatus {
+  color: #f89b11;
+
+  &.completed {
+    color: $blueColor;
+  }
+}
+
+.todoTitle {
+  cursor: pointer;
+
+  width: 100%;
+
+  word-break: break-all;
+}
+
+@media (max-width: $mobileWrap) {
+  .todoCompleteBtn {
+    margin: 0 auto;
+  }
+}

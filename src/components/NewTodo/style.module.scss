@@ -1,0 +1,54 @@
+@import "../../style/constants";
+
+.todoTitleContainer {
+  width: 100%;
+}
+
+.todoTitleHeader {
+  margin-bottom: 5px;
+}
+
+.todoTitle {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 11px 16px;
+
+  border: 1px solid #dde2e4;
+  border-radius: 8px;
+
+  &::placeholder {
+    color: #000;
+
+    opacity: 0.5;
+  }
+}
+
+.modal__createTodoButton {
+  width: min-content;
+  padding: 12px 40px;
+
+  font-size: 18px;
+  line-height: 24px;
+  color: $darkBlueColor;
+
+  background: #f0f5ff;
+  border: none;
+  border-radius: 8px;
+}
+
+.showModalButton {
+  display: inline-flex;
+
+  height: 40px;
+  padding: 10px;
+
+  font-size: 20px;
+  color: $darkBlueColor;
+  text-align: center;
+
+  background: none;
+  background: #d6dbeb;
+  border: none;
+  border-radius: 25px;
+}
